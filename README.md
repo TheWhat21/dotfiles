@@ -5,5 +5,5 @@ Don't take it seriously
 
 <details>
   <summary>Images</summary>
-  [image](https://files.catbox.moe/zh5sb2.png)
+  ![image](https://files.catbox.moe/zh5sb2.png)
 </details>
