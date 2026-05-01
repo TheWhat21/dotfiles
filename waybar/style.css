@@ -1,0 +1,114 @@
+@import url("colours/nord.css");
+
+@define-color glow @nord2;
+@define-color default-bg-col alpha(@nord1, 0.4/* 5 */);
+@define-color default-window-col alpha(@nord0, 0.25);
+@define-color active-workspace-col alpha(@nord0, 0.5);
+@define-color default-text-col @nord5;
+@define-color default-window-text-col @nord4;
+@define-color active-workspace-text-col @nord6;
+@define-color active-workspace-shadow-col @nord5;
+
+
+* {
+	font-family: JetBrains Mono Nerd Font;
+	border-radius: 10px;
+	background: transparent;
+}
+
+#tooltip,
+power,
+#quit,
+#lock,
+#reboot,
+#power,
+#workspaces,
+#window,
+#group-right {
+	background-image/* -color */: linear-gradient(to bottom, alpha(@nord3, 0.525 /* 4375 */ ) 0%, @default-bg-col 50%, @default-bg-col 50%); /* @default-bg-col; */
+	color: @default-text-col;
+
+	margin: 5px;
+	border-radius: 10px;
+
+	border-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	border-color: alpha(@nord6, 0.2) alpha(@nord5, 0.2) alpha(@nord4, 0.2);
+	
+	padding: 5px 10px;
+	transition: color, box-shadow 0.25s;
+}
+
+#group-right {
+	background-image /* -color */ : linear-gradient(to bottom, alpha(@nord3, 0.65 /* 4375 */ ) 0%, @default-bg-col 50%, @default-bg-col 50%); /* @default-bg-col; */
+	/* background-color: @default-bg-col; */
+}
+
+#group-right {
+	padding: 0px
+}
+
+#network,
+#upower,
+#wireplumber,
+#tray,
+#clock {
+	background-color: transparent;
+	color: @default-text-col;
+    margin: 2.5px;
+	padding: 5px 10px;
+	/* box-shadow: 0px 0px 2.5px alpha(black, 0.25); */
+}
+
+#tooltip,
+#workspaces:hover,
+#window:hover,
+#group-right:hover {
+	color: @default-text-col;
+	box-shadow: 0px 0px 5px @active-workspace-shadow-col;
+}
+
+#window{
+	transition: background-color, background-image, size, width, height 0.5s;
+}
+
+window#waybar.empty #window {
+    background-image: none;
+    background-color: transparent;
+    transition: background-color, background-image 1s;
+}
+
+#workspaces {
+	background-image/* -color */: linear-gradient(to bottom, alpha(@nord3, 0.65 /* 4375 */ ) 0%, @default-bg-col 50%, @default-bg-col 50%); /* @default-bg-col; */
+}
+
+#workspaces button {
+	background-color: @default-window-col;
+	color: @default-window-text-col;
+	margin: 2.5px;
+	border-radius: 10px;
+	padding: 2.5px 10px 2.5px 5px;
+	box-shadow: 0px 0px 0px @nord5, 0px 1px 2.5px alpha(black, 0.25);
+	transition: color, background, box-shadow 0.125s;
+}
+
+#workspaces button:hover {
+	color: @default-text-col;
+	transition: color 0.125s;
+}
+
+#workspaces button.active {
+	background-color: @active-workspace-col;
+	color: @active-workspace-text-col;
+	box-shadow: 0px 1px 2.5px @active-workspace-shadow-col;
+	transition: color, background, box-shadow 0.125s;
+}
+
+tooltip,
+menu,
+#tray menu {
+	background-color: @active-workspace-col;
+	color: @default-window-text-col;
+	box-shadow: 0px 0px 0px;
+}
