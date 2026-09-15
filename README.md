@@ -4,6 +4,8 @@ My personal configs, no strict style or organisation, might not even look too go
 Don't take it seriously
 
 <details>
-  <summary>GTK</summary>
-    [Icons](https://github.com/MolassesLover/Nordzy-icon)
+<summary>GTK</summary>
+
+[Icons](https://github.com/MolassesLover/Nordzy-icon)
+
 </details>
