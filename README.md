@@ -10,3 +10,5 @@ Don't take it seriously
 [Theme](https://github.com/EliverLara/Nordic)
 
 </details>
+
+[Cursor](https://github.com/simtrami/posy-improved-cursor-linux)
