@@ -7,5 +7,6 @@ Don't take it seriously
 <summary>GTK</summary>
 
 [Icons](https://github.com/MolassesLover/Nordzy-icon)
+[Theme](https://github.com/EliverLara/Nordic)
 
 </details>
