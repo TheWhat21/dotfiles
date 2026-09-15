@@ -1,0 +1,29 @@
+#!/bin/bash
+# switch_waybar — set Waybar to an explicit layout ("top" or "left")
+# Skips the reload entirely if that layout is already active.
+# Usage: switch_waybar top|left
+
+WAYBAR_DIR="$HOME/.config/waybar"
+CONFIG="$WAYBAR_DIR/config"
+STYLE="$WAYBAR_DIR/style.css"
+STATE_FILE="$WAYBAR_DIR/.layout-state"
+
+target="$1"
+
+if [ "$target" != "top" ] && [ "$target" != "left" ]; then
+    echo "Usage: $0 top|left"
+    exit 1
+fi
+
+current="$(cat "$STATE_FILE" 2>/dev/null)"
+
+# Already in the requested state — nothing to do
+if [ "$current" = "$target" ]; then
+    exit 0
+fi
+
+cp -- "$WAYBAR_DIR/config.$target" "$CONFIG"
+cp -- "$WAYBAR_DIR/style.$target.css" "$STYLE"
+echo "$target" > "$STATE_FILE"
+
+pkill -SIGUSR2 waybar 2>/dev/null || (pkill waybar; waybar & disown)
