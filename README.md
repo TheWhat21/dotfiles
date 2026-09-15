@@ -4,6 +4,6 @@ My personal configs, no strict style or organisation, might not even look too go
 Don't take it seriously
 
 <details>
-  <summary>Images</summary>
-  ![Alt text](https://files.catbox.moe/zh5sb2.png)
+  <summary>GTK</summary>
+  [Icons](https://github.com/MolassesLover/Nordzy-icon)
 </details>
