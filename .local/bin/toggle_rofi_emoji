@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pgrep rofi >/dev/null 2>&1 && killall rofi || rofi -modi emoji -show emoji -theme-str "window { location: north; anchor: north; width: 25%;}"

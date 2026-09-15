@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pgrep -f linux-wallpaperengine-gui &> /dev/null &&  killall linux-wallpaperengine-gui || linux-wallpaperengine-gui --minimized
