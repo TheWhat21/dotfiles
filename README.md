@@ -5,5 +5,5 @@ Don't take it seriously
 
 <details>
   <summary>GTK</summary>
-  [Icons](https://github.com/MolassesLover/Nordzy-icon)
+    [Icons](https://github.com/MolassesLover/Nordzy-icon)
 </details>
