@@ -1,0 +1,13 @@
+@theme "~/.local/share/rofi/themes/nord.rasi"
+
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text ];
+  spacing: 5px;
+}
+element-icon {
+    size: 1em;
+}
+element-text {
+    vertical-align: 0.5;
+}
