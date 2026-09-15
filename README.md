@@ -12,3 +12,10 @@ Don't take it seriously
 </details>
 
 [Cursor](https://github.com/simtrami/posy-improved-cursor-linux)
+
+<details>
+  <summary>Misc</summary>
+
+[OSD (almost)](https://github.com/hyprwm/contrib/tree/main/hyprosd-mako)
+  
+</details>
