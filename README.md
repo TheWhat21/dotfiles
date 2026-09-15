@@ -17,5 +17,6 @@ Don't take it seriously
   <summary>Misc</summary>
 
 [OSD (almost)](https://github.com/hyprwm/contrib/tree/main/hyprosd-mako)
+[Emoji menu](https://github.com/Mange/rofi-emoji)
   
 </details>
