@@ -14,6 +14,7 @@ Don't take it seriously
 </details>
 
 [Cursor](https://github.com/simtrami/posy-improved-cursor-linux)
+[Font](https://archlinux.org/packages/extra/any/ttf-jetbrains-mono-nerd/)
 
 <details>
   <summary>Misc</summary>
