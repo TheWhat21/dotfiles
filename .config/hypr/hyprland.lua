@@ -339,11 +339,6 @@ hl.window_rule({
 	rounding = 0,
 })
 
-hl.workspace_rule({
-	workspace = "secret",
-	on_created_empty = "kitty sudo psiphon & librewolf -P secret",
-})
-
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
 	dwindle = {
@@ -847,8 +842,6 @@ end
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + CTRL + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + CTRL + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
-
-hl.bind(mainMod .. " + CTRL + Z", hl.dsp.exec_cmd("kitty ./authscript.sh"))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
