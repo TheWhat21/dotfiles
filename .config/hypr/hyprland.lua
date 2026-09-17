@@ -858,8 +858,18 @@ hl.bind(
 	{ locked = true, repeating = true }
 )
 hl.bind(
+	"ALT + XF86AudioRaiseVolume",
+	hl.dsp.exec_cmd("rmpc volume +5"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
 	"XF86AudioLowerVolume",
 	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && volume-notify"),
+	{ locked = true, repeating = true }
+)
+hl.bind(
+	"ALT + XF86AudioLowerVolume",
+	hl.dsp.exec_cmd("rmpc volume -5"),
 	{ locked = true, repeating = true }
 )
 hl.bind(
@@ -885,9 +895,13 @@ hl.bind(
 
 -- Requires playerctl
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
+hl.bind("ALT + XF86AudioNext", hl.dsp.exec_cmd("rmpc next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("ALT + XF86AudioPause", hl.dsp.exec_cmd("rmpc togglepause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("ALT + XF86AudioPlay", hl.dsp.exec_cmd("rmpc togglepause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+hl.bind("ALT + XF86AudioPrev", hl.dsp.exec_cmd("rmpc prev"), { locked = true })
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
