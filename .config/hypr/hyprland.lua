@@ -702,38 +702,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd("flameshot gui"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot screen"))
 -- hl.bind("F10")
 short_or_long_press("SUPER + X", function()
-	local layouts = { "dwindle", "scrolling" }
-	local workspace = hl.get_active_workspace()
-	if hl.get_active_special_workspace() then
-		workspace = hl.get_active_special_workspace()
-	end
-
-	local next_layout = "dwindle"
-
-	if not workspace then
-		return
-	end
-
-	for i = 1, #layouts do
-		if layouts[i] == workspace.tiled_layout then
-			local next_layout_idx = (i % #layouts) + 1
-			next_layout = layouts[next_layout_idx]
-			local waybar_layout = (next_layout == "scrolling") and "left" or "top"
-			if layouts[i] == "master" and next_layout == "dwindle" then
-				
-				hl.exec_cmd("notify-send Dwindle")
-			end
-			hl.exec_cmd("switch_waybar " .. waybar_layout)
-			break
-		end
-	end
-
-	if workspace.special then
-		hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
-	else
-		hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
-	end
-	force_decoration_refresh()
+	hl.exec_cmd("cycle-layout")
 end, open_layout_picker, DEFAULT_LONG_PRESS_MS)
 
 hl.bind("SUPER + grave", function()
